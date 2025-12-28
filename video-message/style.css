@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(135deg, #ffdee9, #b5fffc);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: #ff4081;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.video-container {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
+}
+
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button {
+  width: 100px;
+  height: 100px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #ff4081;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+  background: white;
+}
+
+.video-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.video-content.hidden {
+  display: none;
+}
+
+.message-animation {
+  text-align: center;
+}
+
+.heart {
+  font-size: 5rem;
+  animation: pulse 1s infinite;
+  margin-bottom: 20px;
+}
+
+.message-text {
+  font-size: 1.8rem;
+  color: white;
+  margin: 15px 0;
+  animation: fadeInUp 0.8s ease;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.message-text:nth-child(2) {
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+.message-text:nth-child(3) {
+  animation-delay: 0.6s;
+  animation-fill-mode: both;
+}
+
+.message-text:nth-child(4) {
+  animation-delay: 0.9s;
+  animation-fill-mode: both;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.replay-btn {
+  padding: 15px 40px;
+  background: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.replay-btn:hover {
+  background: #e91e63;
+  transform: translateY(-2px);
+}
+
+.replay-btn.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .message-text {
+    font-size: 1.4rem;
+  }
+  
+  .heart {
+    font-size: 3rem;
+  }
+  
+  .play-button {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+}
+

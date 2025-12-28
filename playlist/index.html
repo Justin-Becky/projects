@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playlist de Noël 🎵</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎵 Playlist de Noël 🎄</h1>
+    <div class="player">
+      <div class="album-cover" id="albumCover">
+        <div class="vinyl"></div>
+      </div>
+      <div class="track-info">
+        <h2 id="trackTitle">Sélectionne une chanson</h2>
+        <p id="trackArtist">💕</p>
+      </div>
+      <audio id="audioPlayer" preload="auto"></audio>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar">
+          <div class="progress" id="progress"></div>
+        </div>
+        <div class="time-info">
+          <span id="currentTime">0:00</span>
+          <span id="duration">0:00</span> 
+        </div>
+      </div>
+      <div class="controls">
+        <button class="control-btn" id="prevBtn">⏮</button>
+        <button class="control-btn play-btn" id="playBtn">▶</button>
+        <button class="control-btn" id="nextBtn">⏭</button>
+      </div>
+      <div class="playlist">
+        <div class="playlist-item" data-track="0">🎬 You're a Mean One, Mr. Grinch</div>
+        <div class="playlist-item" data-track="1">🎄 Jingle Bells</div>
+        <div class="playlist-item" data-track="2">❄️ Let It Snow</div>
+        <div class="playlist-item" data-track="3">🎁 All I Want for Christmas Is You</div>
+        <div class="playlist-item" data-track="4">⭐ Silent Night</div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+

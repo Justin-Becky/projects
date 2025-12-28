@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dessin Partagé 🎨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Dessin Partagé 💕</h1>
+    <p class="subtitle">Dessine quelque chose ensemble !</p>
+    <div class="canvas-container">
+      <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+    <div class="controls">
+      <div class="color-picker">
+        <input type="color" id="colorPicker" value="#ff4081">
+        <label for="brushSize">Taille: <span id="brushSizeValue">10</span>px</label>
+        <input type="range" id="brushSize" min="1" max="50" value="10">
+      </div>
+      <div class="buttons">
+        <button id="clearBtn">Effacer</button>
+        <button id="saveBtn">Sauvegarder</button>
+      </div>
+    </div>
+    <p class="message">🍪🎀 Préparons des biscuits et des souvenirs ensemble, aujourd'hui et toujours. 🎀🍪</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
