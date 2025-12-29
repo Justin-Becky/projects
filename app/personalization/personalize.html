@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Personnalisation du Calendrier</title>
+  <link rel="stylesheet" href="personalize-style.css">
+</head>
+<body>
+  <div class="personalize-container">
+    <h1>🎄 Personnaliser ton Calendrier</h1>
+    
+    <div class="personalize-content">
+      <!-- Étape 1: Noms et dates -->
+      <div class="personalize-section">
+        <h2>👥 Informations Personnelles</h2>
+        
+        <div class="form-group">
+          <label>Ton nom (celui qui envoie)</label>
+          <input 
+            type="text" 
+            id="sender-name" 
+            placeholder="Ton nom" 
+            maxlength="50"
+          >
+        </div>
+
+        <div class="form-group">
+          <label>Nom du destinataire</label>
+          <input 
+            type="text" 
+            id="recipient-name" 
+            placeholder="Nom de la personne" 
+            maxlength="50"
+          >
+        </div>
+
+        <div class="form-group">
+          <label>📅 Date de votre rencontre</label>
+          <input 
+            type="date" 
+            id="meeting-date" 
+          >
+          <p class="hint">Cette date s'affichera dans la case 1</p>
+        </div>
+
+        <div class="form-group">
+          <label>📅 Prochain événement important</label>
+          <input 
+            type="text" 
+            id="next-event-name" 
+            placeholder="Ex: Mariage, Voyage, Anniversaire..." 
+            maxlength="50"
+          >
+          <input 
+            type="date" 
+            id="next-event-date" 
+          >
+          <p class="hint">Cet événement s'affichera dans la case 9</p>
+        </div>
+      </div>
+
+      <!-- Étape 2: Messages personnalisés -->
+      <div class="personalize-section">
+        <h2>💌 Messages Personnalisés</h2>
+        <p>Ajoute des messages pour certains jours (optionnel)</p>
+        <div id="custom-messages" class="custom-messages">
+          <!-- Les messages vont s'ajouter dynamiquement -->
+        </div>
+        <button type="button" id="add-message-btn" class="add-btn">+ Ajouter un message</button>
+      </div>
+
+      <!-- Étape 3: Photos personnalisées -->
+      <div class="personalize-section">
+        <h2>📸 Photos Personnelles</h2>
+        <p>Ajoute des photos pour décorer ton calendrier (optionnel)</p>
+        <div id="custom-photos" class="custom-photos">
+          <!-- Les photos vont s'ajouter dynamiquement -->
+        </div>
+        <button type="button" id="add-photo-btn" class="add-btn">+ Ajouter une photo</button>
+      </div>
+
+      <!-- Actions -->
+      <div class="personalize-actions">
+        <button id="save-personalization-btn" class="btn-primary">Sauvegarder & Continuer</button>
+        <button id="skip-personalization-btn" class="btn-secondary">Passer pour maintenant</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="personalize-script.js"></script>
+</body>
+</html>

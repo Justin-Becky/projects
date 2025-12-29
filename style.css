@@ -29,7 +29,7 @@ body {
 .user-avatar {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 80px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -44,11 +44,39 @@ body {
   transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   user-select: none;
+  z-index: 10;
 }
 
 .user-avatar:hover {
   transform: scale(1.1);
   background: #b82929;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton éditer personnalisation */
+.edit-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #4CAF50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.edit-btn:hover {
+  transform: scale(1.1);
+  background: #45a049;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
