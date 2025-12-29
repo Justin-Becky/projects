@@ -1,4 +1,41 @@
 const days = document.querySelectorAll('.day');
+const userAvatar = document.getElementById('user-avatar');
+const avatarText = document.getElementById('avatar-text');
+
+// Initialiser l'avatar au chargement de la page
+function initializeAvatar() {
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  
+  if (currentUser) {
+    // Utilisateur connecté - afficher les initiales en majuscule
+    const firstName = currentUser.firstName.charAt(0).toUpperCase();
+    const lastName = currentUser.lastName.charAt(0).toUpperCase();
+    avatarText.textContent = firstName + lastName;
+  } else {
+    // Utilisateur non connecté - afficher ??
+    avatarText.textContent = '??';
+  }
+}
+
+// Gérer le clic sur l'avatar
+userAvatar.addEventListener('click', function() {
+  const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  
+  if (currentUser) {
+    // Utilisateur connecté - afficher menu de déconnexion
+    const confirmed = confirm(`Vous êtes connecté en tant que ${currentUser.firstName} ${currentUser.lastName}. Voulez-vous vous déconnecter ?`);
+    if (confirmed) {
+      localStorage.removeItem('currentUser');
+      initializeAvatar();
+    }
+  } else {
+    // Utilisateur non connecté - rediriger vers la page d'authentification
+    window.location.href = 'login-signin/auth.html';
+  }
+});
+
+// Initialiser à chaque chargement
+initializeAvatar();
 
 // Tableau des projets - tous les jours ouvrent un projet
 const projects = {

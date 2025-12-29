@@ -70,9 +70,8 @@ Le calendrier est composé de **25 cases**, chacune correspondant à un jour du 
 - Sauvegarde des souvenirs et des interactions
 
 ### Personnalisation
-- Choix du thème visuel (neige, bois, doré…)
 - Ajout de photos personnelles dans certaines cases
-- Messages personnalisés pour chaque jour
+- Messages personnalisés pour certaine cases
 - Création de cartes et lettres avec ton propre texte
 
 ---

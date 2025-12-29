@@ -25,6 +25,33 @@ body {
   box-sizing: border-box;
 }
 
+/* Avatar utilisateur */
+.user-avatar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #d63333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  user-select: none;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+  background: #b82929;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
 /* Header area (titre) */
 h1{
   margin: 0;
