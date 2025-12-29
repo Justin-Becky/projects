@@ -7,7 +7,7 @@ const totalAnimations = 15;
 
 yesBtn.addEventListener('click', () => {
   document.getElementById('app').innerHTML = `
-    <h1>Je le savais, you still love me, je t'aime aussi mon amour 💕</h1>
+    <h1>I knew it! You still love me! 💕</h1>
     <div class="animation">
       <img id="anim" src="animation/8.webp" alt="Animation love" />
     </div>

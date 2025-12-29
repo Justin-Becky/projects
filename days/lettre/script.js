@@ -1,16 +1,16 @@
-const paper = document.getElementById('paper');
+ï»¿const paper = document.getElementById('paper');
 
-// Charger les données personnalisées
+// Charger les donnÃ©es personnalisÃ©es
 function loadPersonalization() {
   const personalization = JSON.parse(localStorage.getItem('personalization')) || {};
   const senderName = personalization.senderName || '??';
   const recipientName = personalization.recipientName || '??';
   
-  // Mettre à jour le titre
+  // Mettre Ã  jour le titre
   const title = document.getElementById('title');
   title.textContent = ` Surprise pour toi ${recipientName} `;
   
-  // Mettre à jour le message personnalisé si présent
+  // Mettre Ã  jour le message personnalisÃ© si prÃ©sent
   if (personalization.customMessages) {
     const msg = personalization.customMessages.find(m => m.day === 16);
     if (msg) {
@@ -18,7 +18,7 @@ function loadPersonalization() {
     }
   }
   
-  // Mettre à jour la signature
+  // Mettre Ã  jour la signature
   document.getElementById('message2').textContent = `Je t'aime ${recipientName}`;
   document.getElementById('message3').textContent = `${senderName}, Avec tout mon amour`;
 }
@@ -36,7 +36,7 @@ paper.addEventListener('pointerdown', (e) => {
 paper.addEventListener('pointermove', (e) => {
   const y = e.clientY || e.touches?.[0]?.clientY || 0;
   if (Math.abs(y - startY) > 10) {
-    moved = true; // on considère que c'est un scroll
+    moved = true;
   }
 });
 

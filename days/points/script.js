@@ -4,14 +4,13 @@ let scene, renderer, particles;
 let cameraPersp, cameraOrtho, activeCamera;
 let modeTexte = false;
 
-let texte = "I Love you Becky";
+let texte = "I love you";
 
 // Charger le texte personnalisé
 function loadPersonalization() {
   const personalization = JSON.parse(localStorage.getItem('personalization')) || {};
-  const senderName = personalization.senderName || '??';
-  const recipientName = personalization.recipientName || '??';
-  texte = `I Love ${recipientName}`;
+  const recipientName = personalization.recipientName || 'you';
+  texte = `I love you ${recipientName}`;
 }
 
 loadPersonalization();
