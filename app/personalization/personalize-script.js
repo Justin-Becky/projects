@@ -16,7 +16,7 @@ function setupEventListeners() {
   
   // Bouton passer
   document.getElementById('skip-personalization-btn').addEventListener('click', function() {
-    window.location.href = 'index.html';
+    window.location.href = '../../index.html';
   });
 }
 

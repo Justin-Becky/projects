@@ -42,7 +42,7 @@ function initializeFormHandlers() {
     }));
     
     alert('Connexion réussie ! Redirection...');
-    window.location.href = 'index.html';
+    window.location.href = '../../index.html';
   } else {
     alert('Email ou mot de passe incorrect');
   }
@@ -94,6 +94,6 @@ function initializeFormHandlers() {
   }));
   
   alert('Compte créé avec succès ! Redirection...');
-  window.location.href = 'index.html';
+  window.location.href = '../../index.html';
   });
 }
